@@ -1,0 +1,5 @@
+@media only screen and (max-width: 1360px) {
+  .menu__item {
+    margin-left: 5vw;
+  }
+}

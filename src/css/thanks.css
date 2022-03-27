@@ -1,0 +1,56 @@
+.thanks-content {
+  padding-top: 289px;
+  background: url("../img/thanks-circle.svg");
+  background-repeat: no-repeat;
+  background-position: top 176px right -140px;
+}
+
+.thanks-content .container-fluid {
+  width: 960px;
+}
+
+.thanks-content .h1 {
+  color: #1E202A;
+}
+
+.thanks-content .h1 span {
+  color: #7529B3;
+}
+
+.thanks-content p {
+  max-width: 768px;
+}
+
+.thanks__img {
+  margin-top: 80px;
+  width: 541px;
+  height: 810px;
+}
+
+.thanks__footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.thanks__footer .button {
+  margin-top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .thanks-content .h1 span span {
+    display: none;
+  }
+  .thanks-content {
+    padding-top: 32vw;
+  }
+  .thanks__img {
+    margin-top: 10.667vw;
+    width: 78.400vw;
+    height: auto;
+    max-height: 117.440vw;
+  }
+  .thanks__footer {
+    padding-top: 10.667vw;
+    padding-bottom: 10.667vw;
+  }
+}

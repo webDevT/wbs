@@ -1,0 +1,160 @@
+.send-mail {
+  padding: 40px 0;
+  background: #7529B3;
+}
+
+.section-title {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.send-mail__content {
+  padding-top: 24px;
+  padding-bottom: 35px;
+}
+
+.photo {
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+}
+
+.send-mail__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.send-mail__text {
+  margin-left: 66px;
+  line-height: 1.2;
+}
+
+.send-mail__link {
+  color: #18CCF5;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: underline;
+}
+
+.send-mail__link:hover {
+  color: #18CCF5;
+  text-decoration: underline;
+}
+
+.contact-info-section {
+  padding-top: 80px;
+  padding-bottom: 76px;
+}
+
+.contact-info__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 8px;
+}
+
+.contact-info__adress {
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.contact-info__link {
+  display: block;
+  color: #15178F;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  text-decoration: underline;
+}
+
+.contact-info__link:hover {
+  background: #15178F;
+}
+
+.contact-page {
+  padding-top: 289px;
+  padding-bottom: 40px;
+  background: url("../img/contact-circle.svg");
+  background-repeat: no-repeat;
+  background-position: top 176px right -111px;
+}
+
+.contact-page .container-fluid {
+  width: 960px;
+}
+
+.h1 {
+  color: #1E202A;
+  margin-bottom: 16px;
+}
+
+.contact-page__sub-title {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Rubik", sans-serif;
+  width: 650px;
+  max-width: 100%;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 76px;
+}
+
+.contact-page__img {
+  width: 396px;
+  height: 592px;
+}
+
+@media only screen and (max-width: 768px) {
+  .send-mail__text {
+    margin-left: 4.267vw;
+  }
+  .send-mail__content {
+    padding-top: 6.400vw;
+    padding-bottom: 4.267vw;
+  }
+  .section-title {
+    font-size: 6.4vw;
+  }
+  .photo {
+    width: 31.200vw;
+    height: 31.200vw;
+  }
+  .contact-info__title {
+    font-size: 6.400vw;
+  }
+  .contact-info-section {
+    padding-top: 21.333vw;
+    padding-bottom: 21.333vw;
+  }
+  .contact-page {
+    background-size: 64vw;
+    background-position: top 17.067vw right -13.333vw;
+    padding-top: 38.400vw;
+    padding-bottom: 10.667vw;
+  }
+  .contact-page__sub-title {
+    font-size: 6.400vw;
+    margin-bottom: 10.667vw;
+  }
+  .contact-page__img {
+    width: 45.333vw;
+    height: auto;
+  }
+}
