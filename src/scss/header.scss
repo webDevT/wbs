@@ -5,6 +5,7 @@
 	//box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
 	background: #fff;
 	position: relative;
+	z-index: 999;
 	
 	.container-fluid {
 		width: 1300px;
@@ -29,7 +30,12 @@
 	position: fixed;
 	width: 100%;
 }
-
+.logo {
+	img {
+		width: 108px;
+		height: 56px;
+	}
+}
 .menu {
 	ul {
 		display: flex;
@@ -115,12 +121,18 @@
 .menu__sub-wrapper {
 	position: absolute;
 	top: 100%;
-	display: none;
+	//display: none;
 	z-index: 99;
 	background: transparent;
+	display: block;
+    visibility: hidden;
+    transition: all linear 1s;
 }
 .menu__item--sub:hover .menu__sub-wrapper {
-	display: block;
+	//display: block;
+	 display: block;
+    visibility: visible;
+    transition: all linear 1s;
 }
 .menu__item:last-child {
 	.menu__link {
@@ -139,7 +151,9 @@
 	background: #000;
 	transition: all 0.5s;
 }
-
+.mobil-social {
+	display: none;
+}
 @media only screen and (max-width : 1360px) {
 	.menu__item {
 		margin-left: 4vw;
@@ -153,9 +167,6 @@
 }
 
 @media only screen and (max-width : 992px) {
-	body {
-		font-size: 16px;
-	}
 	.menu__item {
 		margin-left: 2.5vw;
 	}
@@ -174,6 +185,7 @@
 	.logo {
 		img {
 			width: 27.692vw;
+			height: auto;
 		}
 	}
 	.header {
@@ -217,11 +229,11 @@
 		display: block;
 		background: #EEF3F8;
 		position: absolute;
-		top: 18vw;
+		top: 17vw;
 		left: 0;
 		width: 100%;
 		min-height: 100vh;
-		z-index: 997;
+		z-index: 9;
 		padding: 0 8.974vw;
 		ul {
 			flex-direction: column;
@@ -267,7 +279,8 @@
 		display: none;
 	}
 	.menu__sub-wrapper {
-		position: static;	
+		position: static;
+		display: none;	
 	}
 	.menu .menu__item--sub.active {
 		flex-wrap: wrap;
@@ -288,8 +301,21 @@
 			margin-bottom: 0;
 			margin: 2.1vw 0;
 		}
+		.menu__arrow {
+			transform: rotate(-180deg);
+		}
 	}
-
+	.mobil-social {
+		display: flex;
+		align-items: center;
+		margin-top: 14.615vw;
+		a {
+			margin-right: 5.385vw;
+			img {
+				width: 8.205vw;
+			}
+		}
+	}
 
 
 }

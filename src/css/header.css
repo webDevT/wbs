@@ -2,6 +2,7 @@
   padding: 10px 0;
   background: #fff;
   position: relative;
+  z-index: 999;
 }
 
 .header .container-fluid {
@@ -33,6 +34,11 @@
 .header.sticky {
   position: fixed;
   width: 100%;
+}
+
+.logo img {
+  width: 108px;
+  height: 56px;
 }
 
 .menu ul {
@@ -152,13 +158,21 @@
 .menu__sub-wrapper {
   position: absolute;
   top: 100%;
-  display: none;
   z-index: 99;
   background: transparent;
+  display: block;
+  visibility: hidden;
+  -webkit-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  transition: all linear 1s;
 }
 
 .menu__item--sub:hover .menu__sub-wrapper {
   display: block;
+  visibility: visible;
+  -webkit-transition: all linear 1s;
+  -o-transition: all linear 1s;
+  transition: all linear 1s;
 }
 
 .menu__item:last-child .menu__link {
@@ -183,6 +197,10 @@
   transition: all 0.5s;
 }
 
+.mobil-social {
+  display: none;
+}
+
 @media only screen and (max-width: 1360px) {
   .menu__item {
     margin-left: 4vw;
@@ -193,9 +211,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-  body {
-    font-size: 16px;
-  }
   .menu__item {
     margin-left: 2.5vw;
   }
@@ -210,6 +225,7 @@
   }
   .logo img {
     width: 27.692vw;
+    height: auto;
   }
   .header {
     padding: 2.821vw;
@@ -254,11 +270,11 @@
     display: block;
     background: #EEF3F8;
     position: absolute;
-    top: 18vw;
+    top: 17vw;
     left: 0;
     width: 100%;
     min-height: 100vh;
-    z-index: 997;
+    z-index: 9;
     padding: 0 8.974vw;
   }
   .menu.active ul {
@@ -306,6 +322,7 @@
   }
   .menu__sub-wrapper {
     position: static;
+    display: none;
   }
   .menu .menu__item--sub.active {
     -ms-flex-wrap: wrap;
@@ -328,5 +345,25 @@
   .menu .menu__item--sub.active .menu__sub-link {
     margin-bottom: 0;
     margin: 2.1vw 0;
+  }
+  .menu .menu__item--sub.active .menu__arrow {
+    -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  .mobil-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 14.615vw;
+  }
+  .mobil-social a {
+    margin-right: 5.385vw;
+  }
+  .mobil-social a img {
+    width: 8.205vw;
   }
 }
