@@ -15,6 +15,27 @@ a,
 a:hover {
 	text-decoration: none;
 }
+.button {
+	border: 1px solid $primary-color;
+	padding: 9px 21px;
+	display: inline-block;
+	border-radius: 5px;
+	font-size: 18px;
+	font-weight: 500;
+	transition: all 0.5s;
+}
+.button:hover {
+	background: $primary-color;
+	color: #fff;
+}
+.button--black {
+	background: $black;
+	color: #fff;
+}
+.button--black:hover {
+	background: #fff;
+	color: #000;;
+}
 .container-fluid {
 	width: 860px;
 	max-width: 82.051vw;
@@ -29,6 +50,12 @@ a:hover {
 }
 .container-fluid--l {
 	width: 996px;
+	max-width: 82.051vw;
+	padding-left: 0;
+	padding-right: 0;
+}
+.container-fluid--xl {
+	width: 1075px;
 	max-width: 82.051vw;
 	padding-left: 0;
 	padding-right: 0;
@@ -62,8 +89,8 @@ h3 {
 	margin-bottom: 8px;
 }
 section {
-	padding-top: 160px;
-	padding-bottom: 160px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .intro {
@@ -73,6 +100,7 @@ section {
 //start video section
 .video-section {
 	padding-top: 80px;
+	padding-bottom: 160px;
 }
 .video-wrapper {
 	margin-top: 40px;
@@ -157,6 +185,10 @@ section {
 	display: block;
 	width: 100%;
 	color: $black;
+	h3 {
+		transition: all 0.5s;
+	}
+	
 }
 .our-stories__item:hover {
 	color: $black;
@@ -180,19 +212,107 @@ section {
 	background: #EEF3F8;
 	display: block;
 	padding: 29px 16px 12px 16px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 .stories-label {
 	background: #EEEEEE;
 	border-radius: 5px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	padding: 0 9px;
+	width: auto;
+	margin-right: 8px;
+	font-size: 12px;
+	margin-bottom: 24px;
+	img {
+		margin-right: 7px;
+	}
 }
-//end aur stories style
+.labels__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+.stories__item-footer svg {
+	margin-left: 13px;
+	fill: $black;
+	transition: all 0.5s;
 
+}
+.our-stories__footer {
+	display: flex;
+	justify-content: center;
+	padding-top: 40px;
+	transition: all 0.5s;
+
+}
+.our-stories__item:hover {
+	h3 {
+		color: $primary-color;
+	}
+	.stories__item-footer {
+		color: $primary-color;
+		svg {
+			fill: $primary-color;
+			transform: translateX(10px);
+		}
+
+	}
+}
+//end our stories style
+
+//start work with us section 
+.work-with-us__content {
+	background: $primary-color;
+	color: #fff;
+	border-radius: 5px;
+	padding: 65px 105px;
+}
+.work-with-us {
+	.button {
+		margin-top: 40px;
+	}
+}
+.work-with-us {
+	padding-bottom: 160px;
+}
+//end work with us section
+
+@media only screen and (max-width : 1200px) { 
+	.stories-label {
+		margin-right: 4px;
+	}
+	.our-stories__item-content {
+		padding-right: 3px;
+		padding-left: 10px;
+	}
+	.stories-label {
+		margin-bottom: 10px;
+	}
+	.stories-label {
+		font-size: 10px;
+	}
+}
 @media only screen and (max-width : 992px) { 
 	body {
 		font-size: 16px;
 	}
 	section {
 		padding: 80px 0;
+	}
+	.video-section {
+		padding-bottom: 80px;
+	}
+	.container-fluid--l {
+		max-width: 96vw;
+	}
+	.stories-label img {
+		margin-right: 4px;
+		max-width: 12px;
+	}
+	.work-with-us {
+		padding-bottom: 80px;
 	}
 
 }
@@ -217,7 +337,17 @@ section {
 		font-size: 5.128vw;
 	}
 	section {
-		padding: 20.513vw 0;
+		padding: 10.225vw 0;
+	}
+	.work-with-us {
+		padding-bottom: 0vw;
+	}
+	.video-section {
+		padding-bottom: 20.513vw;
+	}
+	.button {
+		font-size: 4.615vw;
+		padding: 2.564vw 5.385vw
 	}
 	.intro {
 		font-size: 5.128vw;
@@ -234,6 +364,48 @@ section {
 		height: 12.308vw;
 	}
 	//end video section
+
+	//start stories section
+	.our-stories__item-image {
+		height: auto;
+		img {
+			width: 100%;
+		}
+	}
+	.our-stories__item {
+		margin-bottom: 6.154vw;
+	}
+	.our-stories__item-content {
+		padding: 6.154vw 4.103vw 3.077vw 4.103vw
+	}
+	.stories-label {
+		font-size: 3.077vw;
+		height: 8.205vw;
+		padding: 0 2.051vw;
+		margin-right: 2.051vw;
+		margin-bottom: 6.154vw;
+	}
+	.our-stories__item-content {
+		h3 {
+			margin-bottom: 5.128vw;
+		}
+	}
+	.container-fluid--l {
+		max-width: 82.051vw;
+	}
+	.our-stories__footer {
+		padding-top: 4vw;
+	}
+	//end stories section
+	.work-with-us {
+		.container-fluid {
+			max-width: 100%;
+		}
+	}
+	.work-with-us__content {
+		border-radius: 0;
+		padding: 10.256vw 8.974vw;
+	}
 
 
 }
